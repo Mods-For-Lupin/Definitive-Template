@@ -17,6 +17,9 @@
     "entrypoints": {
         "main": [
           "com.cursee.examplemod.ExampleModFabric"
+        ],
+        "client": [
+          "com.cursee.examplemod.ExampleModClientFabric"
         ]
     },
     "mixins": [
