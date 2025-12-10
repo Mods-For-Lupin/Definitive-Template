@@ -1,6 +1,5 @@
 package com.cursee.examplemod.platform;
 
-import com.cursee.examplemod.Constants;
 import com.cursee.examplemod.ExampleMod;
 import com.cursee.examplemod.platform.services.IPlatformHelper;
 import java.util.ServiceLoader;
@@ -21,10 +20,9 @@ public class Services {
   // example our file on NeoForge points to NeoForgePlatformHelper while Fabric points to FabricPlatformHelper.
   public static <T> T load(Class<T> clazz) {
 
-    final T loadedService = ServiceLoader.load(clazz)
-        .findFirst()
-        .orElseThrow(() -> new NullPointerException("Failed to load service for " + clazz.getName()));
+    final T loadedService = ServiceLoader.load(clazz).findFirst().orElseThrow(() -> new NullPointerException("Failed to load service for " + clazz.getName()));
     ExampleMod.LOG.debug("Loaded {} for service {}", loadedService, clazz);
     return loadedService;
   }
+
 }
