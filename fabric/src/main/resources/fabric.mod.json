@@ -8,8 +8,8 @@
         "${mod_author}"
     ],
     "contact": {
-        "homepage": "https://fabricmc.net/",
-        "sources": "https://github.com/FabricMC/fabric-example-mod"
+        "homepage": "https://github.com/Mods-For-Lupin",
+        "sources": "https://github.com/Mods-For-Lupin"
     },
     "license": "${license}",
     "icon": "${mod_id}.png",
@@ -26,7 +26,7 @@
     "depends": {
         "fabricloader": ">=${fabric_loader_version}",
         "fabric-api": "*",
-        "minecraft": "~${minecraft_version}",
+        "minecraft": "${fabric_minecraft_version_range}",
         "java": ">=${java_version}"
     },
     "suggests": {
