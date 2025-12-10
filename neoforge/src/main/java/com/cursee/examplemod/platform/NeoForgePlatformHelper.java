@@ -1,6 +1,7 @@
 package com.cursee.examplemod.platform;
 
 import com.cursee.examplemod.platform.services.IPlatformHelper;
+import java.nio.file.Path;
 import net.neoforged.fml.ModList;
 import net.neoforged.fml.loading.FMLLoader;
 
@@ -22,5 +23,11 @@ public class NeoForgePlatformHelper implements IPlatformHelper {
   public boolean isDevelopmentEnvironment() {
 
     return !FMLLoader.getCurrent().isProduction();
+  }
+
+  @Override
+  public Path getGameDirectory() {
+
+    return FMLLoader.getCurrent().getGameDir();
   }
 }
